@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:learn_getx/pages/getbuilder.dart';
 import 'package:learn_getx/pages/obx.dart';
 
+import 'apis.dart';
 import 'homepage.dart';
 import 'pages/navigation.dart';
 import 'pages/snackbar.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/navigation', page: () => Navigation()),
         GetPage(name: '/thirdpage', page: () => ThirdPage()),
         GetPage(name: '/fourth', page: () => FourthPage()),
+        GetPage(name: '/fifth', page: () => Apis()),
       ],
     );
   }

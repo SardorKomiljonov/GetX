@@ -1,11 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import 'package:learn_getx/pages/navigation.dart';
-import 'package:learn_getx/pages/snackbar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -105,7 +101,27 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              GestureDetector(
+                onTap: () => Get.toNamed('/fifth'),
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.green,
+                  height: 120,
+                  width: 180,
+                  child: Text(
+                    'JSON\nPlaceholder',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
             ],
           )),
         ),
