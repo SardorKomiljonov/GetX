@@ -105,22 +105,46 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              GestureDetector(
-                onTap: () => Get.toNamed('/fifth'),
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.green,
-                  height: 120,
-                  width: 180,
-                  child: Text(
-                    'JSON\nPlaceholder',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () => Get.toNamed('/fifth'),
+                    child: Container(
+                      alignment: Alignment.center,
+                      color: Colors.green,
+                      height: 120,
+                      width: 180,
+                      child: Text(
+                        'Apis',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  GestureDetector(
+                    onTap: () => Get.toNamed('/six'),
+                    child: Container(
+                      alignment: Alignment.center,
+                      color: Colors.deepOrange,
+                      height: 120,
+                      width: 180,
+                      child: Text(
+                        'Json\nPlaceHolder\nGetX & Obx',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           )),
