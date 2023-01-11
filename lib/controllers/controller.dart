@@ -18,17 +18,17 @@ class Controller extends GetxController {
 
   Future<void> fetchAlbumData() async {
     final response = await http
-        .get(Uri.parse('https://jsonplaceholder.typicode.com/photos/2'));
+        .get(Uri.parse('https://jsonplaceholder.typicode.com/posts/1'));
 
     if (response.statusCode == 200) {
       AlbumModel _albumModel = AlbumModel.fromJson(jsonDecode(response.body));
 
       photoList.add(AlbumModel(
-          title: _albumModel.title,
-          url: _albumModel.url,
-          thumbnailUlr: _albumModel.thumbnailUlr,
-          id: _albumModel.id,
-          albumId: _albumModel.albumId));
+        title: _albumModel.title,
+        body: _albumModel.body,
+        userId: _albumModel.userId,
+        id: _albumModel.id,
+      ));
 
       isLoading.value = true;
     } else {

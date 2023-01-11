@@ -14,16 +14,24 @@ class JsonHolder extends StatelessWidget {
     return Scaffold(
       body: Container(
           child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('AlbumID: ${_controller.photoList[0].albumId}'),
-            Text('ID: ${_controller.photoList[0].id}'),
-            Text('Title: ${_controller.photoList[0].title}'),
-            Image.network(
-              _controller.photoList[0].thumbnailUlr,
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('AlbumID: ${_controller.photoList[0].userId}',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+              SizedBox(height: 30),
+              Text('ID: ${_controller.photoList[0].id}',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+              SizedBox(height: 30),
+              Text('Title: ${_controller.photoList[0].title}',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              SizedBox(height: 30),
+              Text(_controller.photoList[0].body,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            ],
+          ),
         ),
       )),
     );
